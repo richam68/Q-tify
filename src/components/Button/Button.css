@@ -1,0 +1,13 @@
+.navbar_button{
+    width: 170px;
+    height: 47px;
+    border: 1px;
+    background-color: var(--css-black);
+    color: var(--css-primary);
+    padding: 10px, 16px, 10px, 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 18px;
+    align-items: center;
+}

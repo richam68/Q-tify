@@ -1,0 +1,11 @@
+.hero_section{
+    /* width: 100vw; */
+    height: 212px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hersection_title{
+    padding: 0.5rem;
+    
+}

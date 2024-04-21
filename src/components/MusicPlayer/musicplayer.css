@@ -1,0 +1,48 @@
+.musicplayer-container{
+    width: 99vw;
+    height: 120px;
+    border-top: 1px solid var(--css-primary);
+    background-color: var(--css-black);
+    position: relative;
+    display: flex;
+    bottom: 4px
+}
+.audio{
+    color: var(--css-primary);
+   
+}
+.rhap_container{
+    background-color: var(--css-black) !important;
+    width: 90% !important;
+    position: relative;
+    left: 100px
+}
+.rhap_main-controls-button{
+    color: var(--css-primary) !important
+}
+.rhap_progress-filled{
+    background-color: var(--css-primary) !important;
+}
+.rhap_current-time{
+    color: var(--css-white) !important;
+}
+.rhap_progress-indicator{
+    background-color: var(--css-white) !important;
+}
+.rhap_time {
+color: var(--css-white) !important
+}
+.rhap_footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.track-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover; /* Make sure the image covers the entire area */
+    /* z-index: -1;  */
+    border-radius: 10px;
+    margin: 15px
+  }

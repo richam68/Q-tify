@@ -1,0 +1,35 @@
+.navbar-parent{
+    position: relative;
+}
+.songlist-parent{
+    position: absolute;
+    width: 563px;
+    max-height: 400px;
+    top: 61.4px;
+    z-index: 2;
+    overflow-y: scroll;
+    background-color: var(--css-black);
+    
+}
+.navbar_searchbar_form{
+    width: 568px;
+    height: 48px;
+    display: flex;
+}
+.navbar_input_box{
+    flex: 1;
+    border: 1px solid var(--css-black);
+    border-radius: 8px 0px 0px 8px;
+    padding: 14px 20px
+}
+.search_icon{
+    width: 66px;
+    height: 100%;
+    border-radius: 0px 8px 8px 0px;
+    border: 1px solid var(--css-black);
+    color: var(--css-black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}

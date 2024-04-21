@@ -1,0 +1,40 @@
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 19px;
+margin-top: 9px;
+}
+.card-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+.card-content {
+  width: 159px;
+}
+.card-pills {
+  background-color: var(--css-white);
+  border-radius: 0px 0px 10px 10px;
+  height: 23px;
+}
+.pills-title {
+  background-color: var(--css-black);
+  color: var(--css-white);
+  width: 65px;
+  border-radius: 10px;
+  padding: 4px, 8px, 4px, 8px;
+  gap: 1px;
+  font-size: 10px;
+  padding: 1px;
+}
+.pills{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px
+}
+.card-album-name {
+  font-style: "poppins sans-sarif";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+}

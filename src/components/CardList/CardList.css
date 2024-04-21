@@ -1,0 +1,16 @@
+.cardList-container{
+    /* width: 100vw; */
+    margin: 16px;
+}
+.card-heading{
+    padding: 0px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.collapse-btn{
+    color: var(--css-primary);
+    cursor: pointer;
+    padding: 2px;
+    transition: ease;
+}

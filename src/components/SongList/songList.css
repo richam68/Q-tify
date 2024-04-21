@@ -1,0 +1,26 @@
+.songlist-inner-wrapper{
+    width: 530px;
+    height: 71px;
+    display: flex;
+    margin: 1px;
+    margin-bottom: 14px;
+    align-items: center;
+    
+}
+.songs-title{
+    flex: 1;
+    padding: 29px;
+    font-size: 16px;
+}
+.songlist-follows{
+    width: 88px;
+    height: 24px;
+    font-size: 12px;
+}
+.songlist-wrapper{
+    border: 1px solid var(--css-primary);
+}
+.songs-artist{
+    font-size: 12px;
+    line-height: 18px;
+}

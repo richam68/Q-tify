@@ -1,0 +1,17 @@
+.arrow{
+        background: transparent;
+        border: none;
+        position: absolute;
+        top: 112px;
+        z-index: 1;
+        transform: translate(-50);
+}
+.swipper-container{
+    position: relative;
+}
+.arrow-left{
+    left: -4px;
+}
+.arrow-right{
+    right: 0px
+}

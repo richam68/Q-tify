@@ -83,35 +83,37 @@ function App() {
   let mergeTopAndNewAlbum = [...topAlbum, ...newAlbum];
   console.log("newAlbum", accordionData);
 
-  return (
-    <div className="App">
-      <Navbar searchData={mergeTopAndNewAlbum} />
-      <HeroSection />
-      <CardList title="Top Album" navId="ta" topAlbum={topAlbum} />
-      <CardList title="New Album" navId="na" topAlbum={newAlbum} />
-      <SectionFilter
-        title="Songs"
-        topAlbum={filterSongs}
-        genreData={genreData}
-        executeFilter={(genre) => {
-          if (genre === "all") {
-            setFilterSongs(songs);
-          } else {
-            setFilterSongs(songs.filter((item) => item.genre.key === genre));
-          }
-        }}
-      />
-      <Accordion accordionData={accordionData} />
-      <MusicPlayer />
 
-      {/* ---specific route--- */}
-      <Routes>
-      {/* <Route path='/albumDetails' element={<AlbumDetails/>} /> */}
+return (
+  <div className="App">
+    <Navbar searchData={mergeTopAndNewAlbum} />
+   
+    
+    <Routes>
+      <Route path="/" element={
+        <>
+         <HeroSection />
+          <CardList title="Top Album" navId="ta" topAlbum={topAlbum} />
+          <CardList title="New Album" navId="na" topAlbum={newAlbum} />
+          <SectionFilter
+            title="Songs"
+            topAlbum={filterSongs}
+            genreData={genreData}
+            executeFilter={(genre) => {
+              if (genre === "all") {
+                setFilterSongs(songs);
+              } else {
+                setFilterSongs(songs.filter((item) => item.genre.key === genre));
+              }
+            }}
+          />
+          <Accordion accordionData={accordionData} />
+          <MusicPlayer />
+        </>
+      } />
       <Route path="/album-details" element={<AlbumDetails />} />
-      </Routes>
-
-    </div>
-  );
+    </Routes>
+  </div>
+);
 }
-
 export default App;

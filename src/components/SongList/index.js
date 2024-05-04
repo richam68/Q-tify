@@ -1,22 +1,29 @@
 import React, { useState, useEffect } from "react";
 import "./songList.css";
 
-const SongList = ({ songLists }) => {
+const SongList = ({ songLists,inputText }) => {
   console.log("dd", songLists);
   const [artistName, setArtistName] = useState([]);
 
   const findArtist = () => {
+    if (songLists && songLists.length > 0) {
     let artist = songLists[0].songs.map((item) => item.artists);
     setArtistName(artist);
+    }
   };
   console.log("hh", artistName);
 
   useEffect(() => {
     findArtist();
-  }, []);
+  }, [inputText]);
 
+  if (!songLists || songLists.length === 0) {
+    return <div className="songlist-error">No data found</div>;
+  }
   return (
     <div className="songlist-wrapper">
+      {songLists.length > 1 && 
+      <>
       {songLists.map((item) => (
         <div className="songlist-inner-wrapper" key={item.id}>
            
@@ -39,6 +46,8 @@ const SongList = ({ songLists }) => {
           <div className="songlist-follows">{item.follows} Follows</div>
         </div>
       ))}
+      </>
+    }
     </div>
   );
 };

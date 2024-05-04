@@ -24,3 +24,16 @@
     font-size: 12px;
     line-height: 18px;
 }
+.songlist-error{
+    height: auto;
+    background-color: var(--css-black);
+    color: var(--css-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: none !important;
+    font-weight: 300;
+    border: 2px solid var(--css-white);
+    border-radius: 10px;
+    margin-top: 1px;
+}

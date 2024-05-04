@@ -13,24 +13,26 @@ margin-top: 9px;
 }
 .card-pills {
   background-color: var(--css-white);
-  border-radius: 0px 0px 10px 10px;
-  height: 23px;
+    border-radius: 0px 0px 10px 10px;
+    height: 23px;
+    padding: 3px;
+    padding-bottom: 8px;
 }
 .pills-title {
   background-color: var(--css-black);
-  color: var(--css-white);
-  width: 65px;
-  border-radius: 10px;
-  padding: 4px, 8px, 4px, 8px;
-  gap: 1px;
-  font-size: 10px;
-  padding: 1px;
+    color: var(--css-white);
+    width: 65px;
+    border-radius: 19px;
+    padding: 4px, 8px, 4px, 8px;
+    gap: 1px;
+    /* font-size: 10px; */
+    padding: -3px;
+    margin: 2px;
+
 }
 .pills{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2px
+  padding: 3px;
+  font-size: 9px;
 }
 .card-album-name {
   font-style: "poppins sans-sarif";

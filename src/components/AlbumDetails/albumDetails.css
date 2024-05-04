@@ -1,0 +1,11 @@
+.album-detail-wrapper{
+    height: 361px;
+    padding: 30px 0px 0px 85px;
+}
+.album-header{
+    display: flex;
+    padding: 30px 0px 0px 4px;
+}
+.album-detail-body{
+    width: 1283px
+}

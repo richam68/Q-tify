@@ -113,7 +113,7 @@ const handleClickNext = () => {
      <img src={musicTracks[trackIndex].image} alt="Track Cover" className="track-image" width={80} height={80}/>
     <AudioPlayer
     className="audio"
-     autoPlay
+     autoPlay={false}
      src={musicTracks[trackIndex].src}
      onPlay={e => console.log("onPlay")}
      autoPlayAfterSrcChange={false}

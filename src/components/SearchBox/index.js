@@ -34,7 +34,7 @@ const SearchBox = ({ searchData }) => {
         </button>
       </form>
       <div className="songlist-parent">
-        {popup && <SongList songLists={songLists} />}
+        {popup && <SongList songLists={songLists} inputText={inputText}/>}
       </div>
     </div>
   );

@@ -21,7 +21,9 @@ const Cards = ({ imgSrc, followers, songTitle, title }) => {
         </div>
         <div className="card-pills">
           <p className="pills-title">
-            <span className="pills">{followers} follows</span>
+          <span className="pills">{followers} follows</span>
+           {/* {followers ? (<span className="pills">{followers} follows</span>) :(<span className="pills">
+            {`${likes} Likes`} </span>)}  */}
           </p>
         </div>
       </div>

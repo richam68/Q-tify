@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 const Cards = ({ imgSrc, followers, songTitle, title }) => {
+
   const navigate = useNavigate();
 
   const goToAlbumDetailsPage = () => {
@@ -21,7 +22,9 @@ const Cards = ({ imgSrc, followers, songTitle, title }) => {
         </div>
         <div className="card-pills">
           <p className="pills-title">
-          <span className="pills">{followers} follows</span>
+          <span className="pills">
+          {followers} Follows
+          </span>
            {/* {followers ? (<span className="pills">{followers} follows</span>) :(<span className="pills">
             {`${likes} Likes`} </span>)}  */}
           </p>

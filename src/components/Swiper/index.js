@@ -20,7 +20,7 @@ export default function Swipper({topAlbum, navId }) {
       virtual
       navigation={{ prevEl: `.arrow-left${navId}`, nextEl: `.arrow-right${navId}` }}
     >
-      {topAlbum.length && topAlbum.map((item) => 
+      {Boolean(topAlbum.length) && topAlbum.map((item) => 
         (
         <SwiperSlide key={item.id}>
           <Cards

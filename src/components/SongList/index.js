@@ -22,7 +22,7 @@ const SongList = ({ songLists,inputText }) => {
   }
   return (
     <div className="songlist-wrapper">
-      {songLists.length > 1 && 
+      {Boolean(songLists.length > 1) && 
       <>
       {songLists.map((item) => (
         <div className="songlist-inner-wrapper" key={item.id}>

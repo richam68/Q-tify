@@ -9,6 +9,7 @@ const SearchBox = ({ searchData }) => {
   const [popup, setPopup] = useState(false);
 
   const handleInput = (e) => {
+    e.preventDefault()
     let value = e.target.value;
     setInputText(e.target.value);
     setPopup(!popup);
@@ -16,8 +17,13 @@ const SearchBox = ({ searchData }) => {
     let search = searchData.filter((item) =>
       item.title.toLowerCase().includes(value.toLowerCase())
     );
+    // console.log("search", search)
     setSongList(search);
   };
+
+  // const handleSubmit = (e) => {
+  //   e.preventDefault()
+  // }
 
   return (
     <div className="navbar-parent">

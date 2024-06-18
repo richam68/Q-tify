@@ -26,6 +26,8 @@ console.log("navId",navId)
             <Cards
               key={item.id}
               imgSrc={item.image}
+               //followers={item.follows ? `${item.follows}` : `${item.likes}`}
+              //followers={item}
               followers={item.follows}
               songTitle={item.title}
               title={item.songs.length}

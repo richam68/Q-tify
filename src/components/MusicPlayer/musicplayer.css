@@ -1,11 +1,13 @@
 .musicplayer-container{
     width: 99vw;
-    height: 120px;
+    height: 100px;
     border-top: 1px solid var(--css-primary);
     background-color: var(--css-black);
     position: relative;
     display: flex;
-    bottom: 4px
+    bottom: 0px;
+    position: sticky;
+    z-index: 2;
 }
 .audio{
     color: var(--css-primary);

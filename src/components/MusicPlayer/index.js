@@ -116,7 +116,7 @@ const handleClickNext = () => {
      autoPlay={false}
      src={musicTracks[trackIndex].src}
      onPlay={e => console.log("onPlay")}
-     autoPlayAfterSrcChange={false}
+     autoPlayAfterSrcChange={true}
      showSkipControls={true}
      showJumpControls={false}
      //header={`Now playing: ${musicTracks[trackIndex].image}`}

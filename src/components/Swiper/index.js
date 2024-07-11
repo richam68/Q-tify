@@ -48,7 +48,8 @@ export default function Swipper({topAlbum, navId, handleCardClick }) {
             followers={item.follows}
             songTitle={item.title}
             title={item.songs ? `${item.songs.length}`: ''}
-           onClick={() => handleCardClick(item.id)}
+             onClick={() => handleCardClick(item.id, item.songs ? 'album' : 'song')}
+            //onClick={() => handleCardClick(item.id, "album")}
           />
         </SwiperSlide>
       ))}

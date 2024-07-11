@@ -4,15 +4,24 @@ import Cards from "../Cards";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const CardList = ({ title, navId, topAlbum }) => {
+const CardList = ({ title, navId, topAlbum, songs }) => {
+  console.log("songs", songs)
   const [show, setShow] = useState(false);
   console.log("navId", navId);
 
   const navigate = useNavigate();
 
-  const handleCardClick = (albumId) => {
-    navigate(`/album-details/${albumId}`);
+  const handleCardClick = (albumId, type) => {
+    console.log("albumId", albumId)
+    if (type === "album") {
+      navigate(`/album-details/${albumId}`);
+    } else if (type === "song") {
+      // Handle click for single song
+      console.log(`Clicked on single song with id ${albumId}`);
+      // Optionally implement a different action for single songs
+    }
   };
+  
   return (
     <div className="cardList-container">
       <div className="card-heading">
@@ -40,11 +49,22 @@ const CardList = ({ title, navId, topAlbum }) => {
               followers={item.follows}
               songTitle={item.title}
               title={item.songs.length}
-              onClick={() => handleCardClick(item.id)}
+              onClick={() => handleCardClick(item.id, "album")}
             />
           ))}
 
           
+          {/* Render cards for single songs */}
+          {songs.map((song) => (
+            <Cards
+              key={song.id}
+              imgSrc={song.image}
+              followers={song.followers}
+              songTitle={song.title}
+              title="Single Song"
+              onClick={() => handleCardClick(song.id, "song")}
+            />
+          ))}
         </div>
       )}
     </div>

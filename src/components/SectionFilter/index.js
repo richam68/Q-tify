@@ -3,7 +3,7 @@ import Tab from "@mui/material/Tab";
 import React, { useState } from "react";
 import Swipper from "../Swiper";
 
-const SectionFilter = ({ title, topAlbum, genreData, executeFilter }) => {
+const SectionFilter = ({ title, songs, genreData, executeFilter }) => {
   const [selectedTab, setSelectedTab] = useState(0);
 
   return (
@@ -25,7 +25,7 @@ const SectionFilter = ({ title, topAlbum, genreData, executeFilter }) => {
         ))}
       </Tabs>
 
-      <Swipper topAlbum={topAlbum} navId="filter"/>
+      <Swipper topAlbum={songs} navId="filter"/>
     </div>
   );
 };

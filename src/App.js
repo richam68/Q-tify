@@ -84,21 +84,19 @@ function App() {
   let mergeTopAndNewAlbum = [...topAlbum, ...newAlbum];
   console.log("newAlbum", accordionData);
 
-
+console.log("songs", songs)
 return (
   <div className="App">
     <Navbar searchData={mergeTopAndNewAlbum} />
-   
-    
     <Routes>
       <Route path="/" element={
         <>
          <HeroSection />
-          <CardList title="Top Album" navId="ta" topAlbum={topAlbum} />
-          <CardList title="New Album" navId="na" topAlbum={newAlbum} />
+          <CardList title="Top Album" navId="ta" topAlbum={topAlbum} songs={songs} />
+          <CardList title="New Album" navId="na" topAlbum={newAlbum} songs={songs}/>
           <SectionFilter
             title="Songs"
-            topAlbum={filterSongs}
+            songs={filterSongs}
             genreData={genreData}
             executeFilter={(genre) => {
               if (genre === "all") {

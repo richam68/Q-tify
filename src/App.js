@@ -16,6 +16,7 @@ import MusicPlayer from "./components/MusicPlayer";
 import { Routes, Route } from "react-router-dom";
 import AlbumDetails from "./components/AlbumDetails";
 
+
 function App() {
   const [topAlbum, setTopAlbum] = useState([]);
   const [newAlbum, setNewAlbum] = useState([]);
@@ -111,7 +112,7 @@ return (
           <MusicPlayer />
         </>
       } />
-      <Route path="/album-details" element={<AlbumDetails />} />
+      <Route path="/album-details/:albumId" element={<AlbumDetails mergeTopAndNewAlbum={mergeTopAndNewAlbum}/>} />
     </Routes>
   </div>
 );

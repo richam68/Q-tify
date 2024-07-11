@@ -4,10 +4,16 @@
   gap: 19px;
 margin-top: 9px;
 }
-.card-wrapper{
-    display: flex;
-    flex-direction: column;
-}
+  .card-wrapper{
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      transition: all 0.3s ease;
+  }
+  .card-wrapper :hover{
+    opacity: 0.9; /* Reduce opacity on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  }
 .card-content {
   width: 159px;
 }
@@ -21,7 +27,7 @@ margin-top: 9px;
 .pills-title {
   background-color: var(--css-black);
     color: var(--css-white);
-    width: 65px;
+    width: 69px;
     border-radius: 19px;
     padding: 4px, 8px, 4px, 8px;
     gap: 1px;

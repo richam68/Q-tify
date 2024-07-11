@@ -8,8 +8,26 @@ import Cards from "../Cards";
 import {ReactComponent as LeftArrow} from "./left1.svg"
 import {ReactComponent as RightArrow} from "./right1.svg"
 import "./swiper.css"
+import { useSnackbar } from "notistack";
 
-export default function Swipper({topAlbum, navId }) {
+export default function Swipper({topAlbum, navId, handleCardClick }) {
+
+  const {enqueueSnackbar} = useSnackbar();
+
+  const handleReachEnd = () => {
+    if (topAlbum.length > 0) {
+      enqueueSnackbar("You've reached the end. Please use the left arrow to go back.", {
+        variant: 'info',
+      });
+    }
+  };
+
+  const handleReachBeginning = () => {
+    enqueueSnackbar("You've reached the beginning. Please use the right arrow to go forward.", {
+      variant: 'info',
+    });
+  };
+
   return (
     <div className="swipper-container">
     <Swiper
@@ -19,6 +37,8 @@ export default function Swipper({topAlbum, navId }) {
       slidesPerView={7}
       virtual
       navigation={{ prevEl: `.arrow-left${navId}`, nextEl: `.arrow-right${navId}` }}
+      onReachEnd={handleReachEnd}
+      onReachBeginning={handleReachBeginning}
     >
       {Boolean(topAlbum.length) && topAlbum.map((item) => 
         (
@@ -28,6 +48,7 @@ export default function Swipper({topAlbum, navId }) {
             followers={item.follows}
             songTitle={item.title}
             title={item.songs ? `${item.songs.length}`: ''}
+           onClick={() => handleCardClick(item.id)}
           />
         </SwiperSlide>
       ))}

@@ -2,7 +2,12 @@ import { useNavigate } from "react-router-dom";
 import "./albumDetails.css";
 import ArrowCircleLeftOutlinedIcon from "@mui/icons-material/ArrowCircleLeftOutlined";
 import StickyHeadTable from "../Table";
-const AlbumDetails = () => {
+import { useParams } from 'react-router-dom';
+
+const AlbumDetails = ({mergeTopAndNewAlbum}) => {
+  console.log("mergeTopAndNewAlbum", mergeTopAndNewAlbum)
+  let { albumId } = useParams();
+  console.log('Album ID:', albumId);
   const navigate = useNavigate();
 
   const backToHome = () => {

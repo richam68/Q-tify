@@ -3,7 +3,7 @@ import Tooltip from '@mui/material/Tooltip';
 import { useNavigate } from 'react-router-dom';
 
 
-const Cards = ({ imgSrc, followers, songTitle, title }) => {
+const Cards = ({ imgSrc, followers, songTitle, title, onClick }) => {
 
   const navigate = useNavigate();
 
@@ -15,7 +15,7 @@ const Cards = ({ imgSrc, followers, songTitle, title }) => {
   return (
     <>
      <Tooltip title={title? `${title} songs` : ''} placement="top" arrow >
-    <div className="card-wrapper" onClick={goToAlbumDetailsPage}>
+    <div className="card-wrapper" onClick={() => onClick()}>
       <div className="card-content">
         <div>
           <img src={imgSrc} alt={title} style={{borderRadius: "8px 8px 0px 0px"}}/>
